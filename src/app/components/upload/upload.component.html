@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<!-- <div style="text-align: center;"> -->
+    <head>
+      <title>Upload Page</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>
+          body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            background-image: url("../../assets/liquid-cheese.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+		}
+    h1 {
+			color: #000000;
+			font-size: 28px;
+			/* margin-bottom: 10px; */
+		}
+    .container {
+            font-family: 'Poppins', sans-serif;
+			/* margin-bottom: 10000px; */
+			width: 400px;
+			padding: 20px;
+			/* background-color:#ffffff; */
+			/* box-shadow: 0px 0px 5px 0px #B2B2B2; */
+			border-radius: 5px;
+			text-align: center;
+            
+		}
+    .form{
+            text-align: left;
+        }
+        </style>
+    </head>
+<body>
+  <div class="container">
+    <br>
+	<h1><b>Upload Your Certificate</b></h1>
+    <br>
+    <br>
+	<h4>
+		Attach the file below
+	</h4>
+    <br>
+    <br>
+	<form action="/action_page.php"
+		enctype="multipart/form-data">
+        
+            <label style="text-align: center;" for="myfile">  <b>  Select a file: </b><br><br>    
+            <input style="text-align: center;" type="file" id="myfile" name="myfile" multiple="multiple">
+    </label>
+        
+		<br/>
+    <br><br>
+    <button type="submit" class = "button" ><b> SUBMIT</b></button>
+	</form>
+</div>
+</body>
+<!-- </div> -->
+
+</html>

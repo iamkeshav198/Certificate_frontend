@@ -1,0 +1,21 @@
+
+  /* label {
+    margin-left: 100px;
+  } */
+  
+  .button {
+    background-color: #f4189c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+          font-size: 20px;
+          font-weight: bold;
+  }
+
+  .button:hover {
+    background-color: #c00d78;
+  }

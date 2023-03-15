@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Certification Generation</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      button:hover {
+        background-color: #c00d78;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="testbox">
+      <form action="/">
+        <div class="banner">
+          <h1 style="color:rgb(0, 0, 0)">Certification Generation</h1>
+        </div>
+<hr>
+        <div *ngIf="alert" class="alert alert-success" role="alert">
+          <div style="text-align: center;">
+            <strong style="text-align: center;">  &nbsp;  Success !</strong> The Data you entered has been recorded......
+            <button style="width: 25px; border-color: 1px #43da43; background-color: #5ad25a;" (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="colums">
+          <div class="item">
+            <label for="ein">EIN<span>*</span></label>
+            <input id="ein" value="" type="number" name="ein" [(ngModel)]="data.ein" required >
+          </div>
+          <div class="item">
+            <label for="name"> Name<span>*</span></label>
+            <input id="name" value="" type="text" name="name" [(ngModel)]="data.name" required/>
+          </div>
+          <div class="item">
+            <label for="dur">Duration(in hrs)<span>*</span></label>
+            <input id="dur" value="" type="text"   name="dur" required [(ngModel)]="data.duration" required/>
+          </div>
+          <div class="item">
+            <label for="dept"> Department<span>*</span></label>
+            <input id="dept" value="" type="text"   name="dept" [(ngModel)]="data.dept" required/>
+          </div>
+          <div class="item">
+            <label for="email">Email<span>*</span></label>
+            <input id="email" value="" type="email"   name="email" [(ngModel)]="data.email" required/>
+          </div>
+          <div class="item">
+            <label for="trname">Training Name<span>*</span></label>
+            <input id="trname" value="" type="text" name="trname" [(ngModel)]="data.tr_name" required/>
+          </div>
+          <div class="item">
+            <label for="st_date">Starting Date<span>*</span></label>
+            <input id="st_date" value="" type="date"   name="st_date" required/>
+          </div>
+          <div class="item">
+            <label for="end_date">End Date<span>*</span></label>
+            <input id="end_date" value="" type="date"   name="end_date" required/>
+          </div>
+          <div class="item">
+            <label for="issue_dt">Date of Issue<span>*</span></label>
+            <input id="issue_dt" value="" type="date"   name="issue_dt" required/>
+          </div>
+          
+        </div>
+        <div class="question">
+          <label>Priority</label>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="none" id="radio_1" name="type"/>
+              <label for="radio_1" class="radio"><span>Low</span></label>
+            </div>
+            <div>
+              <input  type="radio" value="none" id="radio_2" name="type"/>
+              <label for="radio_2" class="radio"><span>Medium</span></label>
+            </div>
+            <div>
+              <input  type="radio" value="none" id="radio_3" name="type"/>
+              <label for="radio_3" class="radio"><span>High</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="btn-block">
+          
+          <button class= "button"  type="submit" style="background-color: #ff0099; float:left;align-items: center;" (click)="addcertiifcatecall()" >Submit</button>
+          <!-- <a href="http://localhost:4200/table"> -->
+            
+          <button class = "button" type="view" routerLink="/table"  style="background-color: #ff0099; float:right;align-items: center; ">View</button>
+          <button class = "button" type="download" routerLink="/certificate" style="background-color: #ff0099; float:right;align-items: center; margin-right: 10px;"  >Download Certificate</button>
+        <!-- </a> -->
+        </div>
+      </form>
+      <!-- {{data|json}} -->
+    </div>
+  </body>
+</html>

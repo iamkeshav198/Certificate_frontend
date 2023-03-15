@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+<title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+             body {
+            width: 100vw;
+            height: 100vh;
+            /* display: flex;
+            justify-content:center ;
+            align-items: center; */
+            background-image: url("../../assets/liquid-cheese.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+		}
+
+    h1 {
+			color: #000000;
+			font-size: 35px;
+			/* margin-bottom: 10px; */
+		}
+btn_sub{
+
+}
+btn_view{
+
+}
+btn_dwn{
+
+}
+
+        button {
+			background-color: #f4189c;
+			color: white;
+			padding: 14px 20px;
+			margin: 0 auto;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+		}
+
+		button:hover {
+			background-color: #c00d78;
+        }
+        th{
+            color: #000000;
+        }
+        td{
+            color: rgb(255, 255, 255);
+            font-size: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <br>
+    <h1 style="text-align: center;">Employer Details: </h1>
+    <br><br><br>
+    <table style="width:100%" id="excel-table"  class="table table-hover" cellspacing="10" width="100%"  >
+        <thead>
+            
+            <tr>
+                <th>EIN</th>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Training Name</th>
+            </tr>
+        </thead>
+    <tbody>
+
+        <tr *ngFor="let detail of details">
+        <td>{{detail.ein}}</td>
+        <td>{{detail.name}}</td>
+        <td>{{detail.duration}}</td>
+        <td>{{detail.dept}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.tr_name}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <button  (click)="exportexcel()">Export to Excel</button>
+        <!-- <button type="submit" mat-raised-button color="primary" class="submit-button; float-right;"></button> -->
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+</body>
+</html>
